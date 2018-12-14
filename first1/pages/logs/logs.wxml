@@ -1,0 +1,36 @@
+<!--logs.wxml-->
+<view class="container">
+
+  <!--第一层层：背景图背景图，高斯模糊-->
+  <view class="bg">
+    <image class="poster" mode="scaleToFill" src='/pages/img/background.jpg'></image>
+  </view>
+  <!--第二层层：灰色蒙层-->
+  <view class="bg-gray">
+  </view>
+
+
+ <text style='position: absolute;top: 0; width:100%;font-size:30px;margin-top:10px ;margin-bottom:10rpx;display: flex;flex-direction:row;align-items:center;justify-content:center;'>{{title}}</text> 
+<txv-video wx:if="{{condition}}" class="goods-video" vid="{{movieList[index].vid}}" playerid="txv1" autoplay="{{true}}"></txv-video>
+<text style=' color:#888888;font-size:20px'>{{movieList[index].name}}</text>
+
+
+<view style="position: absolute;top: 580rpx;width:100%;display:flex;flex-direction:row;justify-content:between;">
+<button type="primary" bindtap="videoPlay">播放</button>
+<button type="primary" bindtap="videoPause">暂停</button>
+<button type="primary" bindtap="videoSpeed">{{SpeedName}}</button>
+</view>
+
+<scroll-view class="list" scroll-y scroll-top="" style="height: 500rpx;">
+  <view wx:for="{{movieList}}" wx:key="{{a}}" wx:for-index="Index">
+    <view id="{{Index}}" class="list-one {{Index === index ? 'list-one-choose' : ''}}" bindtap="bindTapChoose" >
+        <view class="name">
+          <text class="list-index">{{Index}}</text>
+        </view>
+        <text style="color:#FFFFFF;font-size:40rpx">{{movieList[Index].name}}</text>
+    </view>
+  </view>
+</scroll-view>
+
+
+</view>

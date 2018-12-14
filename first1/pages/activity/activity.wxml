@@ -1,0 +1,145 @@
+<view class="container" style="display: {{DetailShow === true ? 'none' : ''}}">
+
+  <!--第一层层：背景图背景图，高斯模糊-->
+  <view class="bg">
+    <image class="poster" mode="scaleToFill" src=""></image>
+  </view>
+  <!--第二层层：灰色蒙层-->
+  <view class="bg-gray">
+  </view>
+
+<view >
+<view style="position: absolute;top: 0rpx;width:100%;display:flex;flex-direction:row;justify-content:space-between;align-items:center;padding:10rpx;border-bottom: 1px solid #fff;background-color:#9BCD9B;">
+<text style="font-size:40rpx;">距离筛选</text>
+<picker bindchange="DistanceChange" value="" range="{{distanceList}}">
+<view style='display:flex;'>
+  <view class="param_d">{{distanceList[distanceIndex]}}    ></view>
+  </view>
+</picker>
+</view>
+
+<scroll-view class="list" scroll-y scroll-top="" style="height: 900rpx;">
+  <view wx:for="{{activeList}}" wx:key="{{a}}" wx:for-index="Index">
+    <view id="{{Index}}" class="list-one {{Index === index ? 'list-one-choose' : ''}}" bindtap="detail" >
+        <!-- <view class="name">
+          <text class="list-index">{{Index}}</text>
+        </view> -->
+        <!-- <text style="color:#0D0D0D;font-size:40rpx">{{activeList[Index]}}</text> -->
+
+        <!-- 活动发起人的头像和昵称 -->
+        <view>
+        <image class="list-one-poster" src="{{activeList[Index].avatarUrl}}"></image>
+        <!-- <view style='margin-left:20rpx'>{{activeList[Index].name}}</view> -->
+        </view>
+
+
+        <view class="list-one-right">
+          <view class="activename">{{activeList[Index].ActivityName}}</view>
+          <view class="author">地点：{{activeList[Index].LocationName}}</view>
+          <view class="author">时间：{{activeList[Index].date}}---{{activeList[Index].Time}}</view>
+          <text class="author">距离：{{activeList[Index].distance}}km</text>
+          <text class="author" decode="{{true}}" space="{{true}}" style="color:#969696">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看详情>></text>
+          <!-- <view class="author">报名人数：</view> -->
+        </view>
+
+    </view>
+  </view>
+</scroll-view>
+
+<view>
+<button type="warn" size="{{defaultSize}}"  bindtap="publish"  style="  position: absolute;top:1050rpx;width:280rpx;margin-left:230rpx;border-radius: 50px"> 发布活动 </button> 
+</view>
+
+</view>
+
+
+
+
+</view>
+
+
+<!-- ***************************************************** -->
+<!-- ***************************************************** -->
+<!-- ***************************************************** -->
+
+
+<!-- 活动详情和报名处 -->
+<view style="display: {{DetailShow === true ? '' : 'none'}}">
+
+<!-- <view style='position: absolute;top: 0rpx;'>Detail</view> -->
+<view class="main">
+    <view class="container">
+        <view class="topHead">
+            <view class="imgwrap">
+                <image src="{{activeList[DetailIndex].avatarUrl}}"></image>
+            </view>
+            <view class="topTitle">
+                <view style="font-size:40rpx;color:#3A5FCD">{{activeList[DetailIndex].ActivityName}}</view>
+                <text class="i">发布人：{{activeList[DetailIndex].name}}</text>
+            </view>
+        </view>
+        <view class="moreInfo">
+            <view class="item_li">
+                <view class="param_t">日期</view>
+                <view class="param_t">{{activeList[DetailIndex].date}}</view>
+
+            </view>
+            <view class="item_li">
+                <view class="param_t">时间</view>
+                <view class="param_t">{{activeList[DetailIndex].Time}}</view>
+            </view>
+            <view class="item_li">
+                <view class="param_t">地点</view>
+                <view class="param_t">{{activeList[DetailIndex].LocationName}}</view>
+            </view>
+            <view class="item_li">
+                <view class="param_t">报名人数</view>
+                <view class="param_t">{{ActPersonList.length}}人</view>
+            </view>
+            <view class="item_ct">
+                <view class="param_t">活动详情</view>
+                <view class="param_c">{{activeList[DetailIndex].description}}</view>
+               
+            </view>
+        </view>
+    </view>
+
+    <!-- 该活动下已报名的用户列表 -->
+  <scroll-view
+    class=""
+    scroll-y 
+    scroll-top=""
+    style="height:300rpx"
+    >
+    <view wx:for="{{ActPersonList}}" wx:key="{{index}}">
+      <view
+        id="{{index}}"
+        class="list-one2"
+        hover-class="list-one-choose"
+        bindtap=""
+        >
+        <view class="name">
+          <text class="list-index">{{index+1}}</text>
+        </view>
+        <image class="userImage" src="{{ActPersonList[index].avatarUrl}}"></image>
+        <view class="list-one-right">
+          <view class="name">{{ActPersonList[index].name}}</view>
+          <view style="">性别：{{ActPersonList[index].gender === "1" ? '男' : '女'}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+
+
+
+    <view class="btnWrap">
+        <button type="warn" bindtap="CommitEnter">
+        {{hasEnter}}
+        </button>
+    </view>
+    
+</view>
+
+</view><!-- 活动详情和报名处截止 -->

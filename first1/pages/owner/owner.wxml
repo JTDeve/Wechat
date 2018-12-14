@@ -1,0 +1,30 @@
+
+<view class="main">
+
+  <view class="title">
+  小程序功能操作指南
+  </view>
+
+
+    <view class="itemname">\n1、附近在玩：</view>
+     <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***可以看到全国轮友们正在玩的实时位置，以及当前总人数，迅速加入吧！</text>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***点击“我正在这玩”,您的轮滑位置全国轮滑玩家实时可见啦！还可以选择轮滑时长，更多玩家期待你的足迹～  </text>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***注意：地图不显示时详见第四点权限设置。  </text>
+    <button  bindtap="NearQuick" style="width:300rpx">附近在玩>></button>
+
+    <view class="itemname">2、热门活动：</view>
+     <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***进入热门活动,可见全国发布的轮滑活动,支持距离筛选哦。</text>
+     <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***点击活动查看详情,选择报名活动/取消报名。</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***点击“发布活动”，完善信息,轮友们都能参加啦！</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***注意：不能发布活动时详见第四点权限设置。  </text>
+      <button  bindtap="ActQuick" style="width:300rpx">热门活动>></button>
+      <view class="itemname">\n3、联系客服：</view>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***欢迎各位玩家提出bug和改善建议，点击撩客服~</text>
+      <button open-type="contact" style="width:300rpx">联系客服>></button>
+ 
+
+</view>
+<view class="itemname">\n4、权限设置：</view>
+<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;***若基础功能或与定位相关的服务不能正常访问时，可以授权使用地理位置~</text>
+<text decode="{{true}}" space="{{true}}">\n&nbsp;&nbsp;&nbsp;&nbsp;***或者小程序右上角---关于轮滑online---点击右上角---设置~</text>
+<button open-type="openSetting" bindopensetting="callback" style="width:260rpx;">设置>></button>

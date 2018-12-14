@@ -1,0 +1,31 @@
+<view>
+
+  <!-- 轮滑鞋 -->
+  <view>
+    <view>
+      轮滑鞋
+    </view>
+  </view>
+
+  <!-- 刀架 -->
+  <view>
+    <view>
+      刀架
+    </view>
+  </view>
+
+  <!-- 轮子 -->
+  <view>
+    <view>
+      轮子
+    </view>
+  </view>
+
+  <!-- 轴承 -->
+  <view>
+    <view>
+      轴承
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,91 @@
+<view class="container">
+
+<!-- 平花专区 -->
+  <view class="selection">
+      <view class="header">
+           <text style="background-color: #B5B5B5;">平花专区</text>
+      </view>
+
+      <view class="content">
+
+          <view class="content-item">
+             <image src='/pages/img/1.png' bindtap="PJ"/>
+             <view class="content-item-text">
+              <text>平花基础</text>
+             </view>
+          </view>
+
+          <view class="content-item">
+             <image src='/pages/img/2.png' bindtap="PH"/>
+             <view class="content-item-text">
+              <text>平花进阶</text>
+             </view>
+          </view>
+
+          <view class="content-item">
+             <image src='/pages/img/3.png' bindtap="comb"/>
+             <view class="content-item-text">
+              <text>精选comb</text>
+             </view>
+          </view>
+
+          <view class="content-item">
+             <image src='/pages/img/4.png' bindtap="Pshow"/>
+             <view class="content-item-text">
+              <text>比赛赏析</text>
+             </view>
+          </view>
+
+      </view>
+  </view>
+
+  <view class="selection">
+      <view class="header">
+           <text style="background-color: #B5B5B5;">刹车专区</text>
+      </view>
+
+      <view class="content">
+
+          <view class="content-item">
+             <image src='/pages/img/5.png' bindtap="ShaGrade"/>
+             <view class="content-item-text">
+              <text>刹车等级</text>
+             </view>
+          </view>
+
+          <view class="content-item">
+             <image src='/pages/img/6.png' bindtap="ShaShow"/>
+             <view class="content-item-text">
+              <text>刹车赏析</text>
+             </view>
+          </view>
+      </view>
+  </view>
+
+
+    <view class="selection">
+      <view class="header">
+           <text style="background-color: #B5B5B5;">其他</text>
+      </view>
+
+      <view class="content">
+
+          <view class="content-item">
+             <image src='/pages/img/7.png' bindtap="Dance"/>
+             <view class="content-item-text">
+              <text>轮舞</text>
+             </view>
+          </view>
+
+          <view class="content-item">
+             <image src='/pages/img/8.png' bindtap="limit"/>
+             <view class="content-item-text">
+              <text>极限</text>
+             </view>
+          </view>
+      </view>
+  </view>
+
+
+
+</view>

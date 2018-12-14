@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "66频道",
+"usingComponents": {
+  "txv-video": "plugin://tencentvideo/video"
+}
+}
+

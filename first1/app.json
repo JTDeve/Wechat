@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/first/first",
+    "pages/logs/logs",
+    "pages/logs/movieMain",
+    "pages/owner/owner",
+    "pages/music/music",
+    "pages/zhuangbei/zhuangbei",
+    "pages/activity/activity",
+    "pages/activity/publish",
+    "pages/ganhuo/ganhuo"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "轮滑online",
+    "navigationBarTextStyle":"black"
+  },
+
+  "tabBar": {
+    "color": "#7A7A7A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/img/index1.png",
+        "selectedIconPath": "pages/img/index2.png"
+      },
+      {
+        "pagePath": "pages/zhuangbei/zhuangbei",
+        "text": "装备控",
+        "iconPath": "pages/img/community1.png",
+        "selectedIconPath": "pages/img/community2.png"
+      },
+      {
+        "pagePath": "pages/ganhuo/ganhuo",
+        "text": "休闲",
+        "iconPath": "pages/img/music3.png",
+        "selectedIconPath": "pages/img/music4.png"
+      },
+      {
+        "pagePath": "pages/owner/owner",
+        "text": "我的",
+        "iconPath": "pages/img/owner1.png",
+        "selectedIconPath": "pages/img/owner2.png"
+      }
+    ]
+  },
+
+    "plugins": {
+      "tencentvideo": {
+        "version": "1.1.1",
+        "provider": "wxa75efa648b60994b"
+      }
+    }
+}

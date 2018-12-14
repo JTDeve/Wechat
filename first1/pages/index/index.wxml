@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="bg-gray">
+
+
+<view  class="swiper">
+  <swiper indicator-dots="true"  
+    autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}"  class="slide-image"  />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" > 获取头像昵称 </button>
+    <block wx:else>
+      <image  class="userinfo-image" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="">{{userInfo.nickName}}</text>
+    </block>
+</view>
+
+<view class="content">
+  <view class='content-item'>
+    <image  src='/pages/img/nearfinal.png' bindtap="invite66" style="border-radius: 30px"></image>
+  </view>
+    <view class='content-item'>
+    <image  src='/pages/img/activefinal.png' style="border-radius: 30px" bindtap="active"></image>
+  </view>
+    <view class='content-item'>
+    <image  src='/pages/img/moviefinal.png' bindtap="movie"></image>
+  </view>
+    <view class='content-item'>
+    <image  src='/pages/img/morefinal.png' bindtap="moreInfo"></image>
+  </view>
+
+</view>
+</view>

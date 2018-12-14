@@ -1,0 +1,45 @@
+<view class="main">
+    <view class="container">
+        <view class="topHead">
+            <view class="imgwrap">
+                <image src="{{userInfo.avatarUrl}}"></image>
+            </view>
+            <view class="topTitle">
+                <input placeholder="请输入活动名称（限10字内）" maxlength='10' bindinput="bindKeyInput1" auto-focus/>
+                <text class="i">发布人：{{userInfo.nickName}}</text>
+            </view>
+        </view>
+        <view class="moreInfo">
+            <view class="item_li">
+                <view class="param_t">日期</view>
+                <!-- <view class="param_d">2018-09-04</view> -->
+                <picker mode="date" value="{{date1}}" start="{{date1}}" end="2099-09-01" bindchange="bindStartDateChange" >
+                    <view class="param_d">{{date1}}</view>
+                </picker>
+            </view>
+            <view class="item_li">
+                <view class="param_t">时间</view>
+              <picker bindchange="bindHourChange" value="{{hourindex}}" range="{{array}}">
+                <view class="param_d">{{array[hourindex]}}</view>
+                </picker>
+            </view>
+            <view class="item_li">
+                <view class="param_t">地点</view>
+                <view class="param_d" bindtap="chooseLocation">{{Location}}</view>
+            </view>
+            <view class="item_li">
+                <view class="param_t">报名人数</view>
+                <view class="param_d">1人</view>
+            </view>
+            <view class="item_ct">
+                <view class="param_t">活动详情</view>
+                <!-- <view class="param_c">欢迎各位66们的加入！</view> -->
+                <input placeholder=" 请输入活动详情(200字内，可不填)" maxlength='200' bindinput="bindKeyInput2"/>
+            </view>
+        </view>
+    </view>
+    <view class="btnWrap">
+        <button type="primary" bindtap="commitActivity">确认发布活动</button>
+    </view>
+    
+</view>

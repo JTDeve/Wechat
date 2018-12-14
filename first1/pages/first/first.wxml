@@ -1,0 +1,32 @@
+<view >
+
+    <!-- 提示区 -->
+  <view class="tishi">
+    <text decode="{{true}}" style="margin-buttom:10rpx;color:{{color1}};font-size:40rpx">&nbsp;&nbsp;&nbsp;{{moto}}</text>
+  </view>
+
+  <!-- 地图区 -->
+  <view class="maptype">
+    <map  id="map" longitude="{{Longitude}}" latitude="{{Latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location circles="{{Circles}}"></map>
+  </view>
+
+
+    <!-- 刷新区 -->
+  <view class="refresh">
+<text decode="{{true}}" style="color:#43a;">当前轮滑人数： &nbsp;{{userCount}}人</text>
+        <button type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="button2check"  style="width:250rpx;border-radius: 500px"> 刷新 </button>  
+  </view>
+
+  <!-- 在玩区 -->
+  <view class="there">
+    <text style="color:#a00;margin-left:30rpx">选择轮滑时长：</text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="" style="color:#8B0000;margin-left:3rpx;font-style:italic;font-weight:800;font-size:40rpx">
+        {{array[index]}}>
+       </view>
+    </picker>
+    <button type="warn" size="{{defaultSize}}"  bindtap="button1check"  style="width:280rpx;border-radius: 50px"> 我正在这玩 </button>  
+  </view>
+
+</view>
